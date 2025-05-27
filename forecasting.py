@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 # Suppress Prophet warnings
 warnings.filterwarnings("ignore", category=FutureWarning)
 
-# Configuration
+
 CONFIG = {
     'csv_path': r"D:\kovai.co_task'\data.csv",
     'forecast_periods': 7,
@@ -30,12 +30,12 @@ CONFIG = {
 }
 
 def setup_output_directory(output_dir):
-    """Create output directory if it doesn't exist."""
+   
     output_dir.mkdir(exist_ok=True)
     logger.info(f"Output directory: {output_dir}")
 
 def load_and_prepare_data(path):
-    """Load and prepare data for forecasting."""
+    
     try:
         logger.info(f"Loading data from {path}")
         df = pd.read_csv(path)
@@ -69,7 +69,7 @@ def load_and_prepare_data(path):
         raise
 
 def validate_data_for_forecasting(df_service, service_type, min_data_points=10):
-    """Validate if there's enough data for reliable forecasting."""
+   
     if len(df_service) < min_data_points:
         logger.warning(f"Insufficient data for {service_type}: {len(df_service)} points (minimum: {min_data_points})")
         return False
@@ -82,7 +82,7 @@ def validate_data_for_forecasting(df_service, service_type, min_data_points=10):
     return True
 
 def forecast_service(df, service_type, periods=7, output_dir=None):
-    """Generate forecast for a specific service type."""
+    
     try:
         logger.info(f"Forecasting for {service_type}")
 
@@ -96,7 +96,7 @@ def forecast_service(df, service_type, periods=7, output_dir=None):
         if not validate_data_for_forecasting(df_agg, service_type):
             return None
 
-        # Configure Prophet model with appropriate seasonality
+        
         model = Prophet(
             daily_seasonality=True,
             weekly_seasonality=True,
@@ -179,7 +179,7 @@ def generate_summary_statistics(df_long, forecasts_df):
     return pd.DataFrame(summary)
 
 def main():
-    """Main execution function."""
+   
     try:
         # Setup
         setup_output_directory(CONFIG['output_dir'])
