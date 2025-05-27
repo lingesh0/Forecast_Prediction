@@ -75,10 +75,3 @@ Refer to `Task Report.pdf` for a detailed analysis, including:
 - Technical explanation of the forecasting methodology.
 - Model parameters and configurations.
 
-## 📝 License
-
-This project is licensed under the [MIT License](LICENSE).
-
-## 📬 Contact
-
-For any queries or feedback, please contact [Your Name](mailto:your.email@example.com).
