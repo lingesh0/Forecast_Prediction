@@ -1,4 +1,4 @@
-# Kovai.co Task: Public Transport Passenger Forecasting
+Public Transport Passenger Forecasting
 
 This project focuses on forecasting daily passenger counts for various public transport services using Facebook's Prophet time series forecasting model. The services analyzed include:
 
