@@ -35,8 +35,8 @@ This project focuses on forecasting daily passenger counts for various public tr
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/lingesh0/Kovai.co_task.git
-   cd Kovai.co_task
+   git clone https://github.com/lingesh0/Public_Transport_Passenger_Forecasting.git
+   cd Public_Transport_Passenger_Forecasting 
    ```
 
 2. **Create a Virtual Environment** (Optional but recommended):
